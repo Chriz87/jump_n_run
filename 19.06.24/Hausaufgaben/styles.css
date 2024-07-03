@@ -1,0 +1,28 @@
+  /* Grundlegendes Styling für das Spielbrett */
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  max-width: 300px;
+  margin: 20px auto;
+  border: 3px solid black;
+  }
+
+
+  /* Styling für jede Zelle des Spielbretts */
+
+  .game-board-cell {
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  }

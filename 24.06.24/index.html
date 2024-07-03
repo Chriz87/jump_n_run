@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+TODO: Ändere die Hintergrundfarbe für jedes Gerät
+[lightsalmon] Kleine Geräte (Handys im Hochformat): max-width: 599px
+[powderblue] Mittlere Geräte (Tablets im Hochformat): min-width: 600px 
+[limegreen] Mittlere Gerät (Tables im Querformat): min-width: 768px 
+Große Geräte (Desktops und Laptops): min-width: 992px
+[seagreen] Sehr große Geräte (große Laptops/ Desktops): min-width: 1200px
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Media Query</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+
+    @media screen and (max-width:599px) {
+      body{
+      background-color: lightsalmon;
+      }
+    }
+
+    @media screen and (min-width:600px){
+      body{
+        background-color: powderblue;
+      }
+    }
+
+    @media screen and (min-width:768px){
+      body{
+        background-color: limegreen;
+      }
+    } 
+
+    @media screen and (min-width:992px){
+      body{
+        background-color: blueviolet;
+      }
+    }
+
+    @media screen and (min-width:1200px){
+      body{
+        background-color: seagreen;
+      }
+    }
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>

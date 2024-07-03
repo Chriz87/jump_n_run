@@ -1,0 +1,16 @@
+.content,
+.padding {
+background-color: lightblue;
+}
+/* Padding (Innenabstand) */
+.padding {
+padding: 20px;
+}
+/* Border (Rahmen) */
+.border {
+border: 5px solid black;
+}
+/* Margin (Außenabstand) */
+.margin {
+margin-top: 100px;
+}

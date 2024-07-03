@@ -1,0 +1,94 @@
+/* Import der Schriftart */
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+/* Grundlegende Stile für den Body */
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(218, 22%, 67%);
+    padding: 2rem;
+    font-size: 16px;
+}
+
+/* Header Stile */
+#main-header {
+    padding: 0.5rem 1rem;
+    background-color: hsl(204, 43%, 93%);
+}
+
+/* Preisbereich */
+#price {
+    background-color: hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+    padding: 1rem;
+}
+
+/* Warum wir */
+.why-us {
+    background-color: hsl(179, 43%, 54%);
+    color: hsl(204, 43%, 93%);
+    padding: 0.5rem 1rem;
+}
+
+/* Textstil-Klassen */
+.large-text {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.small-text {
+    font-weight: 400;
+}
+
+/* Farb-Klassen */
+.primary {
+    color: hsl(179, 62%, 43%);
+}
+
+.secondary {
+    color: hsl(71, 73%, 54%);
+}
+
+.gray {
+    color: hsl(218, 22%, 67%);
+}
+
+/* Button-Stil */
+.btn {
+    display: inline-block;
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(204, 43%, 93%);
+    font-weight: bold;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 85%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: hsla(71, 73%, 54%, 0.75);
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: hsl(200, 46%, 75%);
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    body {
+        background-color: hsl(218, 100%, 86%);
+        font-family: 'Cambay', serif;
+    }
+}
+
+/* Große Handys im Querformat */
+@media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+    body {
+        background-color: hsl(240, 10%, 70%);
+        font-family: 'Alegreya Sans', sans-serif;
+    }
+}

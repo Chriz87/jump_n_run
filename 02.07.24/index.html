@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUNG ART GROWS Animiertes Herzlogo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #heart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .letter {
+            position: absolute;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #ff4d4d;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        #center-a {
+            font-size: 40px;
+            color: #ff4d4d;
+            position: absolute;
+            bottom: 55%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        #center-t {
+            font-size: 40px;
+            color: #ff4d4d;
+            position: absolute;
+            bottom: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="heart-container">
+        <span id="center-a">A</span>
+        <span id="center-t">T</span>
+    </div>
+
+    <script>
+        const container = document.getElementById('heart-container');
+        const text = 'YOUNG R GROWS';
+        const letterCount = text.length;
+
+        function createAndPositionLetters() {
+            for (let i = 0; i < letterCount; i++) {
+                const letter = document.createElement('span');
+                letter.textContent = text[i];
+                letter.className = 'letter';
+                
+                const angle = ((i + 0.5) / letterCount) * Math.PI * 2 - Math.PI / 2;
+                const x = 16 * Math.pow(Math.sin(angle), 3);
+                const y = -(13 * Math.cos(angle) - 5 * Math.cos(2*angle) - 2 * Math.cos(3*angle) - Math.cos(4*angle));
+                
+                letter.style.left = `${x * 7 + 150}px`;
+                letter.style.top = `${y * 7 + 150}px`;
+                
+                container.appendChild(letter);
+            }
+        }
+
+        function animateLetters() {
+            const letters = document.querySelectorAll('.letter');
+            const centerA = document.getElementById('center-a');
+            const centerT = document.getElementById('center-t');
+            
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    letter.style.opacity = '1';
+                }, index * 100);
+            });
+
+            setTimeout(() => {
+                centerT.style.opacity = '1';
+            }, letterCount * 100);
+
+            setTimeout(() => {
+                centerA.style.opacity = '1';
+            }, (letterCount + 1) * 100);
+        }
+
+        createAndPositionLetters();
+        animateLetters();
+    </script>
+</body>
+</html>
